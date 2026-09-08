@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         // create an array list to store the calculations
-        ArrayList<Investment> investments = new ArrayList<>();
+        ArrayList<Investment> investments = new ArrayList<>(5);
 
         // displayLine a welcome message
         Console.displayLine("Welcome to the Future Value Calculator");
@@ -30,7 +30,8 @@ public class Main {
             int years
                     = Console.getInt("Enter number of years:      ");
 
-            investments.add(new Investment(monthlyInvestment, yearlyInterestRate, years));
+           Investment i =  new Investment(monthlyInvestment, yearlyInterestRate, years);
+           investments.add(i);
 
             // see if the user wants to continue
             choice = Console.getString("Continue? (y/n): ");
@@ -41,6 +42,7 @@ public class Main {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         NumberFormat percent = NumberFormat.getPercentInstance();
         percent.setMinimumFractionDigits(2);
+
 
         header = "Future Value Calculations";
         displayInvestmentDetails(header, investments, result, currency, percent);
