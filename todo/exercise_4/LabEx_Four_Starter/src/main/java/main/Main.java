@@ -4,10 +4,7 @@ import model.Customer;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -52,6 +49,49 @@ public class Main {
 
     }
 
+//    public static List<Customer> sortCustomersByCountyWithDublinFirst(List<Customer> customers) {
+//
+//        Comparator<Customer> comparator =
+//                Comparator.comparing(
+//                                c -> !c.getCounty().equalsIgnoreCase("Dublin")
+//                        )
+//                        .thenComparing(Customer::getCounty)
+//                        .thenComparing(Customer::getLastName);
+//
+//        Collections.sort(customers, comparator);
+//
+//        return customers;
+//    }
+//
+
+//    public static List<Customer> sortCustomersByAgeGroup(List<Customer> customers) {
+//
+//        Comparator<Customer> comparator =
+//                Comparator.comparing(
+//                                customer -> {
+//
+//                                    int age = Period.between(
+//                                            customer.get(),
+//                                            LocalDate.now()
+//                                    ).getYears();
+//
+//                                    if (age <= 25) {
+//                                        return 1;
+//                                    } else if (age <= 40) {
+//                                        return 2;
+//                                    } else if (age <= 60) {
+//                                        return 3;
+//                                    } else {
+//                                        return 4;
+//                                    }
+//                                }
+//                        )
+//                        .thenComparing(Customer::getLastName);
+//
+//        Collections.sort(customers, comparator);
+//
+//        return customers;
+//    }
 
 
 
