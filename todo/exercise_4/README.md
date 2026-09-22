@@ -26,3 +26,26 @@ email (the part after @). The method will then return the list of sorted objects
 be displayed on the console.
 
 <img width="985" height="481" alt="image" src="https://github.com/user-attachments/assets/d43bb9ee-3121-4900-8502-17e66955bb51" />
+
+## Task 4:
+
+Sort customers alphabetically by county, except that customers from Dublin must appear first.
+
+Within each county, sort customers alphabetically by last name.
+
+
+## Task 5: 
+
+Define the following age groups:
+
+```text
+18–25
+26–40
+41–60
+61+
+
+```
+
+Sort customers by age group, from youngest group to oldest group. Within each age group, sort by `lastName`.
+
+
