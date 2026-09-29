@@ -56,7 +56,6 @@ You should end up with two lists here – the original and the filtered list (wh
 Add the following class to your project
 
 ```java
-package org.example.model;
 
 public class Person {
     private String id;
