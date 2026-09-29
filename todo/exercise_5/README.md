@@ -142,7 +142,33 @@ public class Person {
 
 ```
 
-Then using streams carry out the following:
+Create a separate class called `StreamEx3` and add the following to the `main`
+
+```java
+ List<Person> people = new ArrayList<>();
+
+        people.add(new Person("P001", "John Murphy", 34, "Limerick", true, true));
+        people.add(new Person("P002", "Sarah Kelly", 28, "Cork", true, false));
+        people.add(new Person("P003", "Michael Ryan", 52, "Dublin", true, true));
+        people.add(new Person("P004", "Emma Byrne", 21, "Galway", false, false));
+        people.add(new Person("P005", "David Walsh", 45, "Limerick", true, true));
+        people.add(new Person("P006", "Aoife O'Brien", 31, "Waterford", true, true));
+        people.add(new Person("P007", "Conor Doyle", 19, "Cork", false, false));
+        people.add(new Person("P008", "Lisa Nolan", 39, "Dublin", true, false));
+        people.add(new Person("P009", "Brian McCarthy", 67, "Galway", false, true));
+        people.add(new Person("P010", "Rachel Smith", 25, "Limerick", true, false));
+        people.add(new Person("P011", "Tom Higgins", 58, "Dublin", true, true));
+        people.add(new Person("P012", "Niamh Burke", 42, "Cork", false, true));
+
+
+
+```
+
+
+Then using streams carry out the following on the list: 
+
+
+  
 
 **15.** Print to the console all the people aged 20 to 35 who have a full driving license.
 
