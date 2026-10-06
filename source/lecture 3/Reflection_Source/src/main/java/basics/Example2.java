@@ -26,6 +26,7 @@ public class Example2 {
         arr[4] = 23;
         
         int randomNum = ThreadLocalRandom.current().nextInt(0, 5);
+
         Object AnObject = arr[randomNum]; //if randomNum == 4 the int value is converted to an Integer
         printMethodSignatures(AnObject);
     }

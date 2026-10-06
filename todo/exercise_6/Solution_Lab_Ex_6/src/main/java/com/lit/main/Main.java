@@ -20,20 +20,20 @@ public class Main {
         List<Medals> list = FileIO.readFile("medals.txt");
 
         //task one
-        System.out.println("---------------------------");
+        System.out.println("---------------------------\nTASK 1");
         System.out.println("Percentage of countries whose rank is greater than their rank_by_total " + calculatePercRank(list, 6));
 
         //task two
-        System.out.println("---------------------------");
+        System.out.println("---------------------------\nTASK 2");
         printRank(list);
 
         //task three
-        System.out.println("---------------------------");
+        System.out.println("---------------------------\nTASK 3");
         getFilteredList(list, "stan", "land").forEach(System.out::println);
 
         //task four
-        System.out.println("---------------------------");
-        Comparator<Medals> c = Comparator.comparing(m -> m.getBronzeTotal()); //create Comparator
+        System.out.println("---------------------------\nTASK 4");
+        Comparator<Medals> c = Comparator.comparing(Medals::getBronzeTotal); //create Comparator
         getListSubset(list, 3, c).forEach(System.out::println);
     }
 
@@ -60,12 +60,12 @@ public class Main {
         int random = ThreadLocalRandom.current().nextInt(1, 86 + 1);
 
         List<Medals> list = medalList.stream()
-                .filter(medals -> medals.getRank() == random).collect(Collectors.toList());
+                .filter(medals -> medals.getRank() == random).toList();
 
         if (list.isEmpty())
             System.out.println("No record found with a rank of " + random);
         else
-           list.stream().forEach(System.out::println);
+           list.forEach(System.out::println);
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -82,7 +82,7 @@ public class Main {
     //task four
     public static List<Medals> getListSubset(List<Medals> list, int offset, Comparator<Medals> condition) {
 
-        Collections.sort(list, condition);
+        list.sort(condition);
         Collections.reverse(list);
         return list.subList(0, offset);
 
