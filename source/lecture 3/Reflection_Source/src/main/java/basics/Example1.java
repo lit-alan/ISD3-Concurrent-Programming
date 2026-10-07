@@ -12,14 +12,7 @@ public class Example1 {
 
  
     public static void main(String[] args) {
-        
-        String AnObject = "";
-        
-        Class c = AnObject.getClass();
-        
-        Method[] methods = c.getMethods();
-        Field[] fields = c.getFields();
-        Constructor[] constructors = c.getConstructors();
+
       
         JButton btn = new JButton("Click ME");
         Integer i =10;
@@ -32,11 +25,14 @@ public class Example1 {
         arr[2] = str;
         arr[3] = f;
         arr[4] = 23;
+
+        Customer c = new Customer("Tom", 34);
         
         int randomNum = ThreadLocalRandom.current().nextInt(0, 5);
         
-        Object AnotherObject = arr[randomNum];
-        printMethodNames(AnotherObject);
+      //  Object AnotherObject =
+        printMethodNames(arr[randomNum]);
+        printMethodNames(c);
     }
 
     private static void printMethodNames(Object AnObject) {
@@ -51,3 +47,28 @@ public class Example1 {
     }
     
 }
+
+ class Customer {
+    private String name;
+    private int age;
+    public Customer(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+     public int getAge() {
+         return age;
+     }
+
+     public String getName() {
+         return name;
+     }
+
+     public void setName(String name) {
+         this.name = name;
+     }
+
+     public void setAge(int age) {
+         this.age = age;
+     }
+ }

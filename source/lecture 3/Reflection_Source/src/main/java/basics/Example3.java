@@ -31,7 +31,8 @@ public class Example3 {
         Object AnObject = arr[4]; //if randomNum == 4 the int value is converted to an Integer
         
         try {
-        printFieldContents(AnObject);
+            Customer c = new Customer("Tom", 34);
+        printFieldContents(c);
         }
         catch(IllegalArgumentException iae) {
             System.out.println(iae);
@@ -47,7 +48,7 @@ public class Example3 {
         System.out.println("Contents of the fields for " + c.getName() + " class");
 
         for (Field f : c.getDeclaredFields()) {
-            //f.setAccessible(true);
+            f.setAccessible(true);
             Object value = f.get(AnObject);
             System.out.println(f.getName() + ": " + value);
         }

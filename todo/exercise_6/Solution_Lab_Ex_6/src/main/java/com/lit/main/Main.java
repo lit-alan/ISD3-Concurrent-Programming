@@ -21,7 +21,7 @@ public class Main {
 
         //task one
         System.out.println("---------------------------\nTASK 1");
-        System.out.println("Percentage of countries whose rank is greater than their rank_by_total " + calculatePercRank(list, 6));
+        System.out.println("Percentage of countries whose rank is greater than their rank_by_total " + calculatePercRank(list, 1));
 
         //task two
         System.out.println("---------------------------\nTASK 2");
@@ -33,7 +33,7 @@ public class Main {
 
         //task four
         System.out.println("---------------------------\nTASK 4");
-        Comparator<Medals> c = Comparator.comparing(Medals::getBronzeTotal); //create Comparator
+        Comparator<Medals> c = Comparator.comparing(Medals::getSilverTotal); //create Comparator
         getListSubset(list, 3, c).forEach(System.out::println);
     }
 
