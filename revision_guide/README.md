@@ -104,7 +104,7 @@ Revise the following Java methods, concepts, and operations.
 
 <br>
   
-## Important Stream Concepts 
+## Important Stream Concepts ⚙️
 
 - Distinguish intermediate operations (for example, `filter()`, `map()`, `distinct()`, and `sorted()`) from terminal operations (for example, `collect()`, `reduce()`, `sum()`, `average()`, `min()`, and `max()`).
 - Understand that streams do not normally modify the original collection.
