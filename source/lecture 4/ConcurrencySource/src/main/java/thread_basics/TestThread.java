@@ -4,7 +4,7 @@ package thread_basics;
 public class TestThread {
 
   /**Main method*/
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
 
     // Create threads
     HelloThread t1 = new HelloThread();
@@ -14,7 +14,9 @@ public class TestThread {
     t1.start();
     t2.start();
 
+
     System.out.println("done!");
+
   }//end main
 }//end class Test Thread
 

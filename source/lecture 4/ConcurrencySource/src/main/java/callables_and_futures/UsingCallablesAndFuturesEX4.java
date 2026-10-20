@@ -16,13 +16,13 @@ public class UsingCallablesAndFuturesEX4 {
         ExecutorService executor = Executors.newCachedThreadPool();
 
         List<Callable<String>> callables = Arrays.asList(
-                callable("Monday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
-                callable("Tuesday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
-                callable("Wednesday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
-                callable("Thursday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
-                callable("Friday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
-                callable("Saturday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
-                callable("Sunday", ThreadLocalRandom.current().nextInt(1, 51)));
+                prepareCallable("Monday", ThreadLocalRandom.current().nextInt(1, 5 + 1)),
+                prepareCallable("Tuesday", ThreadLocalRandom.current().nextInt(1,  5 + 1)),
+                prepareCallable("Wednesday", ThreadLocalRandom.current().nextInt(1,  5 + 1)),
+                prepareCallable("Thursday", ThreadLocalRandom.current().nextInt(1,  5 + 1)),
+                prepareCallable("Friday", ThreadLocalRandom.current().nextInt(1,  5 + 1)),
+                prepareCallable("Saturday", ThreadLocalRandom.current().nextInt(1,  5 + 1)),
+                prepareCallable("Sunday", ThreadLocalRandom.current().nextInt(1, 5 + 1)));
 
         String future = executor.invokeAny(callables);
 
@@ -32,7 +32,7 @@ public class UsingCallablesAndFuturesEX4 {
 
     }
 
-    static Callable<String> callable(String result, long sleepSeconds) {
+    static Callable<String> prepareCallable(String result, long sleepSeconds) {
         return () -> {
             TimeUnit.SECONDS.sleep(sleepSeconds);
             return result;
