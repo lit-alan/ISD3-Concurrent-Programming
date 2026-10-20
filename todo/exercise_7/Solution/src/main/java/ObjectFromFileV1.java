@@ -30,9 +30,9 @@ public class ObjectFromFileV1
                         Object o = objectInputStream.readObject();
                         Class c = o.getClass();
                         System.out.println("Name of Class: " + c.getName());
-                        Field[] publicFields = c.getFields();
+                        //Field[] publicFields = c.getFields();
                         
-                        for (Field publicField : publicFields) 
+                        for (Field publicField : c.getFields())
                         {
                             publicField.setAccessible(true);
                             String fieldName = publicField.getName();
