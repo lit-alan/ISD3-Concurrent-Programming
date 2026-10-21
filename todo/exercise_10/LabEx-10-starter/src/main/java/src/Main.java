@@ -11,7 +11,7 @@ import src.model.Person;
 
 public class Main {
 
-    //I'm going to read the data from the file into a List<Record>
+    //I'm going to read the data from the file into a List<Person>
     static List<Person> list = new ArrayList();
     static String file = "census.txt";
 
